@@ -1,0 +1,23 @@
+create database project;
+
+use project ;
+
+create table per_info(code int(11) primary key,
+name varchar(30),
+mono varchar(10),
+Email varchar(255)
+);
+
+
+insert into per_info values (1,'shubham tanmay jamble','9099590599','shubhamjamble@gmail.com');
+
+create table milk_info(
+    code int references per_info(code),
+    liter int(11),
+    fat float(2,1),
+    snf float(2,1),
+    rate int(11),
+    amount bigint(20),
+    date date,
+    mode varchar(10)
+);
